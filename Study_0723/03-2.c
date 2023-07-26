@@ -1,13 +1,13 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-// ¹öºí Á¤·Ä (È¿À²¼º ³ôÀ½)
+// ë²„ë¸” ì •ë ¬
 void sortArray02(int size, int* arr) {
 	for (int i = 0; i < size - 1; i++) {
-		// Å« °ªÀÌ ¿À¸¥ÂÊÀ¸·Î ÀÌµ¿
-		for (int j = 0; j < size - i - 1; j++) { // °¡Àå Å« °ªÀº ºñ±³ÇÒ ÇÊ¿ä ¾øÀ½
+		// í° ê°’ì´ ì˜¤ë¥¸ìª½ìœ¼ë¡œ ì´ë™
+		for (int j = 0; j < size - i - 1; j++) { // ê°€ì¥ í° ê°’ì€ ë¹„êµí•  í•„ìš” ì—†ìŒ
 			if (arr[j] > arr[j + 1]) {
-				// µÎ Á¤¼ö ±³È¯
+				// ë‘ ì •ìˆ˜ êµí™˜
 				int sort = arr[j];
 				arr[j] = arr[j + 1];
 				arr[j + 1] = sort;
@@ -19,18 +19,18 @@ void sortArray02(int size, int* arr) {
 int main_03_2()
 {
 	int size;
-	printf("¹è¿­ Å©±â ÀÔ·Â : ");
+	printf("ë°°ì—´ í¬ê¸° ì…ë ¥ : ");
 	scanf("%d", &size);
 
 	int arr[100];
-	printf("Á¤¼ö ¹è¿­ ÀÔ·Â : ");
+	printf("ì •ìˆ˜ ë°°ì—´ ì…ë ¥ : ");
 	for (int i = 0; i < size; i++) {
 		scanf("%d", &arr[i]);
 	}
 
 	sortArray02(size, arr);
 
-	printf("Á¤·ÄµÈ ¹è¿­ : ");
+	printf("ì •ë ¬ëœ ë°°ì—´ : ");
 	for (int i = 0; i < size; i++) {
 		printf("%d", arr[i]);
 	}
